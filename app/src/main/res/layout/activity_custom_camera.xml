@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextureView
+        android:id="@+id/ttv_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom">
+
+        <com.xhf.customcamera.views.ScaleImageView
+            android:id="@+id/siv_take_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_take_photo" />
+
+        <com.xhf.customcamera.views.ScaleImageView
+            android:id="@+id/siv_turn_direction"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/icon_turn_back" />
+
+        <com.xhf.customcamera.views.ScaleImageView
+            android:id="@+id/siv_gallery"
+            android:src="@mipmap/icon_567"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp" />
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <!--相机图片保存图片路径，属于APP的存储空间-->
+        <external-path name="camera_photos" path="Android/data/com.xhf.customcamera/files/Pictures" />
+    </paths>
+
+</resources>
