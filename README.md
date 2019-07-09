@@ -1,1 +1,7 @@
 # CustomCamera
+1.第一步：先获取到摄像机的管理类CameraManager cameraManager=(CameraManager)getService(Context.CAMERA_SERVICE);
+2.然后在TextureView准备好可以填充预览流的情况下 cameraManager.open(String direction, CameraDevice.StateCallBack(),Thread);//第一个参数代表打开摄像头的方向。第二个参数是接口回调告诉是否正确打开了相机设备
+3.如果打开了则在Opened接口回调中获取到CameraDevice对象，这个对象对我们很重要。
+4.通过CameraDevice对象我们可以进行创建会话CameraCaptureSession。通过createCaptureSeesion（List<Surface>,CameraCaptureSession.StateCallBack）我们能够创建会话，并且给所有List<Surface>预览信息。在onConfigured方法中我们能够拿到CameraCaptureSession对象。
+5.获取到会话对象之后，可以通过CaptureRequest.Builder对象去创建一些类似于刷新频率，焦点事件（自动对焦，设置焦点距离，手动对焦）。
+6.在获取到会话的时候可以更换CaptureRequest请求
