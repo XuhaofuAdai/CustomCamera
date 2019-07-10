@@ -1,4 +1,5 @@
 # CustomCamera
+'高山流水 把酒奕欢 今朝有酒今朝醉 闲来无事码一篇'
 1.获取拍照权限：
 ~~~
 <uses-permission android:name="android.permission.CAMERA" /> <!--相机权限-->
