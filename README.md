@@ -55,10 +55,10 @@ CameraManager cameraManager=(CameraManager)getService(Context.CAMERA_SERVICE);
         return sizes[0];
     }
 ~~~
->3.打开相机。  
-    这里注意状态回调这个设计，由于相机很多都是和底层设备打交道，不可避免的有延迟。  
-    通过接口的方式获取设备状态的回调，可以优化我们的处理。  
-    CameraDevice（相当于Camera1中的Camera对象），CameraCaptureSession,CaptureRequest都是通过这种方式来获取状态的。  
+>3.打开相机 
+这里注意状态回调这个设计，由于相机很多都是和底层设备打交道，不可避免的有延迟。  
+通过接口的方式获取设备状态的回调，可以优化我们的处理。  
+CameraDevice,CameraCaptureSession,CaptureRequest都是通过这种方式来获取状态的。  
 ~~~
   //cameraTarget:相机前后置标识; 
   //mStateCallBack：相机打开状态回调
@@ -66,7 +66,7 @@ CameraManager cameraManager=(CameraManager)getService(Context.CAMERA_SERVICE);
   mCameraManager.openCamera(cameraTarget, mStateCallback, mCameraHandler);
 ~~~
 >4.获取CameraDevice.
-    在CameraDevice.StateCallBack()的回调中，我们可以获取到通过Opened()获取到相机实例
+在CameraDevice.StateCallBack()的回调中，我们可以获取到通过Opened()获取到相机实例
 ~~~
    @Override
             public void onOpened(CameraDevice cameraDevice) {
