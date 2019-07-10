@@ -303,6 +303,9 @@ public class CustomCameraActivity extends BaseActivity implements View.OnClickLi
                     collectorSizes.add(option);
                 }
             }
+            if ((option.getWidth() == width && option.getHeight() == height)||(option.getWidth() == height && option.getHeight() == width)) {
+                return option;
+            }
         }
         if (collectorSizes.size() > 0) {
             return Collections.min(collectorSizes, new Comparator<Size>() {
